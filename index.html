@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>AP Studio Art Project #3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="desmos.js"></script>
+
+    <!-- Social Media Links -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="/image.jpg" />
+    <meta property="og:url" content="link.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:image:alt" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!-- Social Media Links -->
+  </head>
+  <body>
+    <div id="calculator" style="width: 1000px; height: 700px"></div>
+    <script type="text/javascript">
+      var elt = document.getElementById("calculator");
+      var calculator = Desmos.GraphingCalculator(elt, {
+        keypad: false,
+        expressions: false,
+        zoomButtons: false,
+        projectorMode: true,
+        settingsMenu: false,
+        expressions: false,
+        showGrid: false,
+        showXAxis: false,
+        showYAxis: false,
+        xAxisNumbers: false,
+        yAxisNumbers: false,
+      });
+
+      calculator.setExpression({
+        id: "1",
+        latex: "y^{2}\ +\ x^{2\ }<=\ 2.5^{2}",
+        color: "#E8AE35",
+      });
+      calculator.setExpression({
+        id: "2",
+        latex: "y^{2}\ +\ x^{2\ }=\ 2.5^{2}",
+        color: "#F25738",
+      });
+      calculator.setExpression({
+        id: "#",
+        latex: "",
+        color: "#DB763E",
+      });
+    </script>
+  </body>
+</html>
