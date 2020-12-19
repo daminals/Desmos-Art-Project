@@ -10,4 +10,4 @@ then
 fi
 git commit -am $commit
 git push origin master
-git push heroku master
+#git push heroku master
