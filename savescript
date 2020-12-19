@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+ 
+read -p 'commit name: ' commit
+
+if [ -z "$commit"]
+then
+    commit="autosave"
+fi
+git commit -am $commit
+git push origin master
+git push heroku master
